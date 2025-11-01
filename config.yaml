@@ -1,0 +1,33 @@
+app:
+  name: "RAG Indexing Tool"
+  version: "1.0.0"
+
+document_processing:
+  chunk_size: 1000
+  chunk_overlap: 200
+  supported_formats: [
+    ".pdf",                    # PDF documents
+    ".docx", ".doc",           # Microsoft Word
+    ".pptx", ".ppt",           # Microsoft PowerPoint
+    ".xlsx", ".xls",           # Microsoft Excel
+    ".txt",                    # Text files
+    ".md",                     # Markdown
+    ".html", ".htm",           # HTML documents
+    ".epub",                   # E-books
+    ".ipynb",                  # Jupyter Notebooks
+    ".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".gif", ".webp"  # Images
+  ]
+
+embeddings:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  device: "cpu"  # or "cuda"
+
+database:
+  type: "chromadb"
+  path: "./data/vector_db"
+  collection_name: "documents"
+
+paths:
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+  backups: "./data/backups"
