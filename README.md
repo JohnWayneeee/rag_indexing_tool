@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/logo.png" alt="RAG Indexing Tool" width="200"/>
+</p>
+
 # RAG Indexing Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -5,6 +9,29 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com)
 
 Universal utility for indexing documents of various formats into a vector database with semantic search support. Converts documents to RAG-compatible format for use with LLMs.
+
+## 📋 Table of Contents
+
+- [Screenshots](#-screenshots)
+- [Key Features](#-key-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Configuration](#️-configuration)
+- [Usage](#-usage)
+- [API Endpoints](#-api-endpoints)
+- [Tauri Integration](#-tauri-integration)
+- [Project Structure](#-project-structure)
+- [Performance](#-performance)
+- [Testing](#-testing)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+## 📸 Screenshots
+
+![Swagger UI Documentation](./assets/screenshot-swagger.png)
+*Interactive API documentation with all endpoints and examples*
 
 ## 🎯 Key Features
 
@@ -17,6 +44,17 @@ Universal utility for indexing documents of various formats into a vector databa
 - **Storage**: ChromaDB in persistent mode
 - **Semantic Search**: Vector-based search (50-200 ms per query)
 - **REST API**: FastAPI endpoints for integration with Tauri/Rust
+
+## 📋 Prerequisites
+
+Before installing, ensure you have:
+
+- **Python 3.10+** installed ([download](https://www.python.org/downloads/))
+- **pip** package manager (usually comes with Python)
+- **Virtual environment** (recommended): `python -m venv .venv`
+- **System dependencies** (for document processing):
+  - PDF processing libraries (handled automatically via dependencies)
+  - Image processing libraries (handled automatically via dependencies)
 
 ## 📦 Installation
 
@@ -35,6 +73,33 @@ pip install -e .
 4. (Optional) Configure settings:
    - Create `.env` from `.env.example` and adjust settings
    - Or modify `config.yaml` as needed
+
+## 🚀 Quick Start
+
+After installation, you can quickly test the API:
+
+1. **Start the API server:**
+   ```bash
+   python -m src.api.main
+   ```
+
+2. **Access the interactive documentation:**
+   - Swagger UI: http://127.0.0.1:8000/docs
+   - ReDoc: http://127.0.0.1:8000/redoc
+
+3. **Index a document:**
+   ```bash
+   curl -X POST "http://127.0.0.1:8000/index" \
+     -H "Content-Type: application/json" \
+     -d '{"file_path": "./data/raw/sample.pdf", "overwrite": false}'
+   ```
+
+4. **Search:**
+   ```bash
+   curl -X POST "http://127.0.0.1:8000/search" \
+     -H "Content-Type: application/json" \
+     -d '{"query": "your search query", "top_k": 10}'
+   ```
 
 ## ⚙️ Configuration
 
@@ -259,7 +324,17 @@ For detailed documentation, see the [docs/](./docs/) directory:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines.
+Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+
+For detailed contribution instructions, see [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md).
+
+## 📝 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for a list of changes and version history.
+
+## 🔒 Security
+
+For security concerns and vulnerability reporting, see [SECURITY.md](./SECURITY.md).
 
 ## 📄 License
 
