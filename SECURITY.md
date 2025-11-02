@@ -13,8 +13,6 @@ We release patches for security vulnerabilities. Which versions are eligible for
 
 If you discover a security vulnerability in this project, please **do not** open a public issue. Instead, please report it via one of the following methods:
 
-### Email
-Send a detailed description to: [ghost.wayneee@gmail.com](mailto:ghost.wayneee@gmail.com)
 
 ### GitHub Security Advisories
 Use GitHub's [Private Vulnerability Reporting](https://github.com/JohnWayneeee/rag-indexing-tool/security/advisories/new) feature.
