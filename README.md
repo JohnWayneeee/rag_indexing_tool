@@ -336,6 +336,35 @@ See [CHANGELOG.md](./CHANGELOG.md) for a list of changes and version history.
 
 For security concerns and vulnerability reporting, see [SECURITY.md](./SECURITY.md).
 
+## ☕ Support the Project
+
+If you find this project useful, consider supporting its development:
+
+### 🌟 Ways to Support
+
+- **⭐ Star this repository** - Show your appreciation
+- **🐛 Report bugs** - Help improve the project
+- **💡 Suggest features** - Share your ideas
+- **📝 Contribute code** - See [CONTRIBUTING.md](./CONTRIBUTING.md)
+- **💰 Financial support** - See crypto donations below
+
+### 💎 Crypto Donations (Optional)
+
+Support via cryptocurrency:
+
+**USDT (TRC20 - Tron Network):**
+
+<p align="center">
+  <img src="./assets/sponsorship/qr-code.jpg" alt="USDT QR Code" width="300"/>
+</p>
+
+```
+TUBwSZvu8vQexgXDB14nLpsgJXvJ42F6Eg
+```
+
+💳 **Quick Payment via Trust Wallet:**
+[Pay with Trust Wallet](https://link.trustwallet.com/send?asset=c195_tTR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t&address=TUBwSZvu8vQexgXDB14nLpsgJXvJ42F6Eg)
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
