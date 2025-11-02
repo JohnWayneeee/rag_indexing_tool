@@ -1,5 +1,9 @@
 # RAG Indexing Tool
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com)
+
 Universal utility for indexing documents of various formats into a vector database with semantic search support. Converts documents to RAG-compatible format for use with LLMs.
 
 ## 🎯 Key Features
@@ -28,7 +32,9 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-4. Configure settings in `config.yaml` (optional)
+4. (Optional) Configure settings:
+   - Create `.env` from `.env.example` and adjust settings
+   - Or modify `config.yaml` as needed
 
 ## ⚙️ Configuration
 
@@ -48,13 +54,16 @@ database:
   collection_name: "documents"
 ```
 
-Alternatively, configure via environment variables:
-- `CHROMA_DB_PATH` - path to vector database
-- `EMBEDDING_MODEL` - embedding model
-- `EMBEDDING_DEVICE` - device (cpu/cuda)
-- `CHUNK_SIZE` - chunk size
-- `API_HOST` - API host (default: 127.0.0.1)
-- `API_PORT` - API port (default: 8000)
+**Configuration via environment variables** (create `.env` from `.env.example`):
+- `CHROMA_DB_PATH` - path to vector database (default: `./data/vector_db`)
+- `EMBEDDING_MODEL` - embedding model (default: `sentence-transformers/all-MiniLM-L6-v2`)
+- `EMBEDDING_DEVICE` - device: `cpu` or `cuda` (default: `cpu`)
+- `CHUNK_SIZE` - chunk size in characters (default: `1000`)
+- `CHUNK_OVERLAP` - overlap between chunks (default: `200`)
+- `API_HOST` - API host (default: `127.0.0.1`)
+- `API_PORT` - API port (default: `8000`)
+- `API_RELOAD` - enable auto-reload in dev mode (default: `false`)
+- `LOG_LEVEL` - logging level (default: `INFO`)
 
 ## 🚀 Usage
 
@@ -248,6 +257,10 @@ For detailed documentation, see the [docs/](./docs/) directory:
 - [Development Guide](./docs/DEVELOPMENT.md) - Development setup
 - [Contributing](./docs/CONTRIBUTING.md) - Contribution guidelines
 
+## 🤝 Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines.
+
 ## 📄 License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
