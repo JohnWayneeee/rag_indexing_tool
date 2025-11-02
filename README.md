@@ -7,6 +7,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green.svg)](https://fastapi.tiangolo.com)
+![GitHub stars](https://img.shields.io/github/stars/JohnWayneeee/rag_indexing_tool?style=social)
+![GitHub forks](https://img.shields.io/github/forks/JohnWayneeee/rag_indexing_tool?style=social)
+![GitHub issues](https://img.shields.io/github/issues/JohnWayneeee/rag_indexing_tool)
+![GitHub last commit](https://img.shields.io/github/last-commit/JohnWayneeee/rag_indexing_tool)
+![GitHub contributors](https://img.shields.io/github/contributors/JohnWayneeee/rag_indexing_tool)
 
 Universal utility for indexing documents of various formats into a vector database with semantic search support. Converts documents to RAG-compatible format for use with LLMs.
 
